@@ -1,0 +1,64 @@
+<form [formGroup] = "datos" (ngSubmit)="enviarDatos()">
+    <div class="row mx-2">
+        <div class="col-12 text-center">
+            <hr>
+            <h2>Registrar Empleado</h2>
+            <hr>
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="primApellido" class="form-label" >Primer Apellido:</label>
+            </div>
+            <input class="form-control" id="primApellido" type="text" maxlength="20" formControlName="primApellido" onkeyup="this.value = this.value.toUpperCase();">
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="primNombre"  class="form-label">Primer Nombre:</label>
+            </div>
+            <input class="form-control" id="primNombre" type="text" formControlName="primNombre" maxlength="20" onkeyup="this.value = this.value.toUpperCase();">
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="Otros" class="form-label">Otros Nombres:</label>
+            </div>
+            <input class="form-control" id="Otros" type="text" formControlName="otrosNombres" maxlength="50" onkeyup="this.value = this.value.toUpperCase();">
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="Tipo"  class="form-label">Tipo de Identificación:</label>
+            </div>
+            <input class="form-control" id="Tipo" type="text" formControlName="tipoId">
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="Identificación" class="form-label">Número de Identificación:</label>
+            </div>
+            <input class="form-control" id="Identificación" type="text" formControlName="numId">
+        </div>
+        <div class="col-md-6 text-center">
+            <div>
+                <label for="empleo"  class="form-label">País del empleo:</label>
+            </div>
+            <input class="form-control" id="empleo" type="text" formControlName="paisEmpleo">
+        </div>
+        <div class="col-md-6 text-center mt-2">
+            <div>
+                <label for="ingreso"  class="form-label">Fecha de ingreso:</label>
+            </div>
+            <input class="form-control" id="ingreso" type="date" formControlName="fechaIngreso">
+        </div>
+        <div class="col-md-6 text-center mt-2">
+            <div>
+                <label for="fin"  class="form-label">Fecha y hora de registro:</label>
+            </div>
+            <input id="fin" class="form-control" type="datetime-local" formControlName="fechaRegistro">
+        </div>    
+
+        <div class="col-6 text-center my-2">
+            <button type="submit" mat-fab extended color="primary">Guardar</button>
+        </div>
+    </div>
+    </form>
+    <div class="col-6 text-center mb-2">
+        <button mat-fab extended (click)="close()">Cancelar</button>
+    </div>
